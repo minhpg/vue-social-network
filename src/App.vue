@@ -12,45 +12,9 @@
         <v-row>
           <v-col>
             <h2 class="mb-3">Due today</h2>
-
-            <v-card class="mx-auto" tile>
-              
-              <v-list-item four-line>
-                <v-avatar size="56">
-                  <img
-                    alt="user"
-                    :src="`https://randomuser.me/api/portraits/lego/${Math.floor(Math.random() * 10)}.jpg`"
-                  />
-                </v-avatar>
-                <v-list-item-content class="ml-5">
-                  <v-list-item-title
-                    >English assignment due today</v-list-item-title
-                  >
-                  <v-list-item-subtitle>
-                    <span class="caption">Thursday 12.00pm</span>
-                  </v-list-item-subtitle>
-                  <v-list-item-subtitle>
-                    <span class="caption">Thursday 12.00pm</span>
-                  </v-list-item-subtitle>
-                  <v-list-item-subtitle>
-                    <div>
-                      <v-btn
-                        color="red"
-                        rounded
-                        x-small
-                        >Exam</v-btn
-                      >
-                      <v-btn
-                        color="green"
-                        rounded
-                        x-small
-                        >Graded</v-btn
-                      >
-                    </div>
-                  </v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-card>
+            <div v-for="i in 6" :key="i">
+              <tasks />
+            </div>
             
 
             <v-col> </v-col>
@@ -65,9 +29,9 @@
 import SideNav from "./components/SideNav";
 import SystemBar from "./components/SystemBar";
 import Timetable from "./components/Timetable";
-// import Tasks from './components/Tasks'
+import Tasks from './components/Tasks'
 export default {
-  components: { SideNav, Timetable, SystemBar },
+  components: { SideNav, Timetable, SystemBar, Tasks },
   data: () => ({ drawer: null }),
 };
 </script>

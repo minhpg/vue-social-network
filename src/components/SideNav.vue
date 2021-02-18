@@ -8,7 +8,6 @@
         label="Search"
         hide-details="auto"
         width="50%"
-        loading
         color="primary"
       ></v-text-field>
       <v-spacer></v-spacer>
@@ -16,7 +15,14 @@
 
     <v-navigation-drawer v-model="drawer" fixed temporary>
       <v-sheet color="grey lighten-4" class="pa-4">
-        <v-avatar class="mb-4" color="grey darken-1" size="64"></v-avatar>
+        <v-avatar class="mb-4" color="grey darken-1" size="64">
+          <img
+            :src="`https://randomuser.me/api/portraits/lego/${Math.floor(
+              Math.random() * 10
+            )}.jpg`"
+            alt=""
+          />
+        </v-avatar>
 
         <div>Minh Pham</div>
       </v-sheet>

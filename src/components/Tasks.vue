@@ -1,35 +1,35 @@
-            <template>
-  <v-sheet width="100%">
-    <v-row justify="space-around">
-      <v-card width="100%">
-        <v-card-title>
-          <v-col>
-            <div class="d-block ml-3">
-              <p class="text-no-wrap">Submission due today for English</p>
-              <p class="caption text--grey">Thursday at 12.00pm</p>
-              <div class="mt-n4">
-                <v-btn color="red" class="ma-1" height="23" rounded x-small
-                  >Exam</v-btn
-                >
-                <v-btn color="green" class="ma-1" height="23" rounded x-small
-                  >Graded</v-btn
-                >
-              </div>
-            </div>
-          </v-col>
-          <v-col>
-            <v-avatar size="56" class="float-right">
-              <img
-                alt="user"
-                src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
-              />
-            </v-avatar>
-          </v-col>
-        </v-card-title>
-      </v-card>
-    </v-row>
-  </v-sheet>
+<template>
+  <v-card class="mx-auto mb-1" elevation="4">
+    <v-list-item four-line>
+      <v-avatar size="56">
+        <img
+          alt="user"
+          :src="`https://randomuser.me/api/portraits/lego/${Math.floor(
+            Math.random() * 10
+          )}.jpg`"
+        />
+      </v-avatar>
+      <v-list-item-content class="ml-5">
+        <v-list-item-title ><router-link>English assignment due today</router-link></v-list-item-title>
+        <v-list-item-subtitle>
+          <span class="caption">
+            <v-icon size="15">mdi-clock-outline</v-icon>
+            Thursday 12.00pm
+          </span>
+        </v-list-item-subtitle>
+        <v-list-item-subtitle>
+          <span class="caption"
+            ><v-icon size="15">mdi-account-outline</v-icon>
+             Minh Pham
+            </span>
+        </v-list-item-subtitle>
+        <v-list-item-subtitle>
+          <div>
+            <v-btn rounded x-small elevation="0">Exam</v-btn>
+            <v-btn rounded x-small elevation="0">Graded</v-btn>
+          </div>
+        </v-list-item-subtitle>
+      </v-list-item-content>
+    </v-list-item>
+  </v-card>
 </template>
-<style scoped>
-
-</style>
