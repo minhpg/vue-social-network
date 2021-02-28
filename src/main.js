@@ -4,6 +4,9 @@ import vuetify from './plugins/vuetify';
 import store from './store'
 import router from './router'
 
+import './assets/sf.css'
+import './assets/main.css'
+
 Vue.config.productionTip = true
 
 new Vue({

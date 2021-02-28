@@ -24,7 +24,7 @@ const router = new Router({
         {
             name: 'Bookmark',
             path: '/bookmark',
-            component: () => import('./views/Profile')
+            component: () => import('./views/Bookmark')
         }
         
 

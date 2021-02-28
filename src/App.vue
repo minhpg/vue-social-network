@@ -1,9 +1,8 @@
 <template>
   <v-app id="inspire">
     <v-transition transition="scroll-y-transition">
-      <Navbar v-if="this.$route.name != 'Messages'" />
-      <Sidenav v-if="this.$route.name == 'Messages'" />
-      <v-main class="">
+      <Navbar />
+      <v-main class="mt-n5">
         <router-view> </router-view>
       </v-main>
     </v-transition>
@@ -11,12 +10,10 @@
 </template>
 
 <script>
-import Sidenav from "./components/Messages/Sidenav";
 import Navbar from "./components/Navbar";
 export default {
   components: {
     Navbar,
-    Sidenav,
   },
   mounted() {
     const theme = localStorage.getItem("dark_theme");
@@ -30,3 +27,6 @@ export default {
 },
 };
 </script>
+<style scoped>
+
+</style>

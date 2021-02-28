@@ -1,21 +1,35 @@
 <template>
-  <v-container>
+<v-container>
+        <v-row>
+          <v-col
+            cols="12"
+            sm="3"
+          >
+            <v-sheet
+              rounded="lg"
+              min-height="100%"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
 
-
-    <v-main>
-      <!--  -->
-    </v-main>
-
-    <v-footer app color="transparent" height="72" inset>
-      <v-text-field
-        background-color="grey lighten-1"
-        dense
-        flat
-        hide-details
-        rounded
-        solo
-      ></v-text-field>
-    </v-footer>
-  </v-container>
+          <v-col
+            cols="12"
+            sm="8"
+          >
+            <v-sheet
+              min-height="70vh"
+              rounded="lg"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
 </template>
 
+<script>
+export default {
+  data: () => ({ drawer: null }),
+};
+</script>
