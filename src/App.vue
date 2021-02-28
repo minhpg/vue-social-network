@@ -3,7 +3,7 @@
     <v-transition transition="scroll-y-transition">
       <Navbar v-if="this.$route.name != 'Messages'" />
       <Sidenav v-if="this.$route.name == 'Messages'" />
-      <v-main class="dark lighten-3">
+      <v-main class="">
         <router-view> </router-view>
       </v-main>
     </v-transition>

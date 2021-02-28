@@ -4,6 +4,7 @@ import Vue from "vue";
 Vue.use(Router)
 
 const router = new Router({
+    mode: 'history',
     routes: [
         {
             name: 'Home',
@@ -19,7 +20,13 @@ const router = new Router({
             name: 'Profile',
             path: '/profile',
             component: () => import('./views/Profile')
+        },
+        {
+            name: 'Bookmark',
+            path: '/bookmark',
+            component: () => import('./views/Profile')
         }
+        
 
     ]
 })
