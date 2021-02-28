@@ -1,37 +1,32 @@
 <template>
   <v-app id="inspire">
-    <system-bar />
-    <side-nav />
-    <v-main class="grey lighten-2 mt-3">
-      <v-container>
-        <v-row>
-          <v-col>
-            <timetable />
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col>
-            <h2 class="mb-3">Due today</h2>
-            <div v-for="i in 6" :key="i">
-              <tasks />
-            </div>
-            
-
-            <v-col> </v-col>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
+    <v-transition transition="scroll-y-transition">
+      <Navbar v-if="this.$route.name != 'Messages'" />
+      <Sidenav v-if="this.$route.name == 'Messages'" />
+      <v-main class="dark lighten-3">
+        <router-view> </router-view>
+      </v-main>
+    </v-transition>
   </v-app>
 </template>
 
 <script>
-import SideNav from "./components/SideNav";
-import SystemBar from "./components/SystemBar";
-import Timetable from "./components/Timetable";
-import Tasks from './components/Tasks'
+import Sidenav from "./components/Messages/Sidenav";
+import Navbar from "./components/Navbar";
 export default {
-  components: { SideNav, Timetable, SystemBar, Tasks },
-  data: () => ({ drawer: null }),
+  components: {
+    Navbar,
+    Sidenav,
+  },
+  mounted() {
+    const theme = localStorage.getItem("dark_theme");
+    if (theme) {
+        if (theme == "true") {
+            this.$vuetify.theme.dark = true;
+        } else {
+            this.$vuetify.theme.dark = false;
+        }
+    }
+},
 };
 </script>
