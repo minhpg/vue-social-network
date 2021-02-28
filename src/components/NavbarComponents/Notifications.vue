@@ -8,7 +8,7 @@
     <v-divider></v-divider>
     <v-card>
       <v-virtual-scroll
-        :bench="benched"
+        :bench="10"
         :items="items"
         height="700"
         item-height="64"

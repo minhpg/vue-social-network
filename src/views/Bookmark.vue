@@ -33,6 +33,20 @@
             <v-list-item-title>{{ link.name }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item>
+          <v-list-item-content>
+            <v-responsive>
+              <v-text-field
+                dense
+                flat
+                hide-details
+                rounded
+                solo-inverted
+                prepend-inner-icon="mdi-magnify"
+              ></v-text-field>
+            </v-responsive>
+          </v-list-item-content>
+        </v-list-item>
         <!-- <v-list-item>
           <v-list-item-icon>
             <v-tooltip v-if="!$vuetify.theme.dark" bottom>

@@ -16,13 +16,13 @@
             ></v-badge>
           </v-btn>
         </template>
-        <v-card rounded height="250px" width="400px">
+        <v-card rounded width="400px">
           <v-container>
             <v-layout row>
               <v-col>
-                <v-avatar size="130" sm="6">
+                <v-avatar size="130" sm="6" color="grey">
                   <v-img
-                    src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
+                    src=""
                   ></v-img>
                 </v-avatar>
               </v-col>
@@ -30,10 +30,10 @@
                 <v-list>
                   <v-list-item>
                     <v-list-item-title class="title"
-                      >Marcus Brown</v-list-item-title
+                      >User</v-list-item-title
                     >
                   </v-list-item>
-                  <v-list-item>
+                  <v-list-item class="mt-n5">
                     <v-list-item-icon>
                       <v-icon>mdi-account-multiple</v-icon>
                     </v-list-item-icon>
@@ -43,7 +43,7 @@
                       </v-list-item-subtitle>
                     </v-list-item-content>
                   </v-list-item>
-                  <v-list-item>
+                  <v-list-item class="mt-n5">
                     <v-list-item-icon>
                       <v-icon>mdi-home</v-icon>
                     </v-list-item-icon>
@@ -57,11 +57,14 @@
               </v-col>
               <v-col></v-col>
             </v-layout>
-
-              <v-btn width="220px"><v-icon>mdi-message</v-icon><span> Message</span></v-btn>
+            <v-card-actions class="justify-space-around">
+              <v-btn width="220px"
+                ><v-icon>mdi-message</v-icon>
+                <span class="ml-1">Message</span>
+                </v-btn>
               <v-btn><v-icon>mdi-phone</v-icon></v-btn>
               <v-btn><v-icon>mdi-account-check</v-icon></v-btn>
-
+            </v-card-actions>
           </v-container>
         </v-card>
       </v-menu>
