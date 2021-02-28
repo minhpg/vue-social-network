@@ -2,11 +2,11 @@
   <v-container>
     <v-app-bar app flat>
       <v-container class="py-0 fill-height">
-        <v-app-bar-nav-icon>
+        <!-- <v-app-bar-nav-icon>
           <v-btn fab @click="$router.push({ name: 'Home' })" elevation="0">
             <v-icon size="40">mdi-facebook</v-icon>
           </v-btn>
-        </v-app-bar-nav-icon>
+        </v-app-bar-nav-icon> -->
         <!-- <v-app-bar-nav-icon class="hidden-md-and-down">
           <v-avatar color="grey darken-1" size="32"></v-avatar>
         </v-app-bar-nav-icon> -->
@@ -26,9 +26,21 @@
           ></v-text-field>
         </v-responsive>
         <v-spacer></v-spacer>
+        <v-app-bar-nav-icon class="mr-2">
+          <v-menu rounded="lg" left offset-x>
+            <template v-slot:activator="{ on, attrs }">
+              <v-badge :content="6" :value="6" color="red" offset-x="25" offset-y="25">
+                <v-btn v-bind="attrs" v-on="on" fab elevation="0">
+                  <v-icon>mdi-bell</v-icon>
+                </v-btn></v-badge
+              >
+            </template>
+            <Notifications />
+          </v-menu>
+        </v-app-bar-nav-icon>
 
         <v-app-bar-nav-icon>
-          <v-menu rounded='lg' open-on-hover left>
+          <v-menu rounded="lg" left offset-x>
             <template v-slot:activator="{ on, attrs }">
               <v-btn v-bind="attrs" v-on="on" fab elevation="0">
                 <v-icon>mdi-menu-down</v-icon>
@@ -111,7 +123,11 @@
   </v-container>
 </template>
 <script>
+import Notifications from "./NavbarComponents/Notifications";
 export default {
+  components: {
+    Notifications,
+  },
   data: () => ({
     links: [
       {
