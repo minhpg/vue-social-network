@@ -1,24 +1,18 @@
-# learning
+# Vue Social Network
 
-## Project setup
-```
-npm install
-```
+A Social Network frontend in VueJS and Vuetify
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Installation
 
-### Compiles and minifies for production
-```
-npm run build
+Clone this repository
+
+```bash
+git clone https://github.com/minhpg/vue-social-network
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Backend implementation
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Plans for backend:
+- Firebase & Firestore to handle user authentication
+- Express + SocketIO + MongoDB server to handle chat, posts, etc.
+- Python FastAPI - Image and Video processing
