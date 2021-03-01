@@ -24,7 +24,7 @@
         </v-responsive>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon class="mr-2">
-          <v-menu rounded="lg" left offset-y>
+          <v-menu rounded="lg" left offset-y :close-on-content-click="false">
             <template v-slot:activator="{ on, attrs }">
               <v-badge
                 :content="6"
@@ -43,7 +43,7 @@
         </v-app-bar-nav-icon>
 
         <v-app-bar-nav-icon>
-          <v-menu rounded="lg" left offset-y>
+          <v-menu rounded="lg" left offset-y :close-on-content-click="false">
             <template v-slot:activator="{ on, attrs }">
               <v-btn v-bind="attrs" v-on="on" fab elevation="0">
                 <v-icon>mdi-menu-down</v-icon>
@@ -66,6 +66,7 @@ export default {
   },
   data: () => ({}),
   methods: {
+    
     toggleBookmark() {
       console.log(this.$route.name);
       if (this.$route.name == "Bookmark") {

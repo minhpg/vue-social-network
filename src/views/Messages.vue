@@ -37,7 +37,6 @@
                 <template>
                   <v-chip
                     :color="msg.me ? 'primary' : ''"
-                    dark
                     style="height:auto;white-space: normal;"
                     class="pa-4 mb-2 lower-case"
                     rounded

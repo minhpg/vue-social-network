@@ -29,7 +29,7 @@
           class="pl-5"
         >
           <v-list-item-content>
-            <v-btn color="grey darken-3"><span class="subtitle-2 normal">{{link.name}}</span></v-btn>
+            <v-btn><span class="subtitle-2 normal">{{link.name}}</span></v-btn>
           </v-list-item-content>
         </v-list-item>
       </v-list>
